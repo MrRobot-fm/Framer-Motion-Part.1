@@ -11,7 +11,7 @@ const Navbar = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: 'linear' }}
       >
-        <ul className="flex h-full w-1/2 justify-around items-center">
+        <ul className="flex h-full w-[60%] justify-around items-center">
           {linkData.map(link => (
             <li key={link.id}>
               <Link

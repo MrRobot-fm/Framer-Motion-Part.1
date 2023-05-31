@@ -22,5 +22,11 @@ export const linkData = [
     path: '/gesture',
     linkName: 'Gestures',
     isActive: active
+  },
+  {
+    id: 5,
+    path: '/animated-input',
+    linkName: 'Animated Input',
+    isActive: active
   }
 ];

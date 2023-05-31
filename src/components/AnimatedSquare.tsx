@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const AnimatedSquare = () => {
   return (
     <motion.div
-      className="w-[15rem] h-[15rem] bg-white"
+      className="w-[15rem] h-[15rem] bg-white shadow-sm"
       animate={{
         scale: [1, 1, 1.5, 1.5, 1.5, 1.5, 1.5, 1],
         rotate: [0, 0, 0, 360, 360, 360, 360],

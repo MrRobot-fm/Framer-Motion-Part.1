@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const DragCircle = () => {
   return (
     <motion.div
-      className="w-[15rem] h-[15rem] rounded-full bg-white cursor-pointer"
+      className="w-[15rem] h-[15rem] rounded-full bg-white cursor-pointer shadow-2xl"
       drag
       dragSnapToOrigin={true}
       whileHover={{

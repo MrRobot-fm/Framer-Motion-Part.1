@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -5,17 +6,24 @@ import {
   Route,
   Outlet
 } from 'react-router-dom';
-import Home from './pages/Home';
+
 import Navbar from './components/Navbar';
-import Square from './pages/Square';
-import Menu from './pages/Menu';
-import Gesture from './pages/Gesture';
+import Loading from './components/Loading';
+
+// Lazy loading components
+const Home = lazy(() => import('./pages/Home'));
+const Square = lazy(() => import('./pages/Square'));
+const Menu = lazy(() => import('./pages/Menu'));
+const Gesture = lazy(() => import('./pages/Gesture'));
+const Input = lazy(() => import('./pages/Input'));
 
 const Root = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <Suspense fallback={<Loading />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
@@ -27,6 +35,7 @@ const router = createBrowserRouter(
       <Route path="/animated-square" element={<Square />} />
       <Route path="/vertical-menu" element={<Menu />} />
       <Route path="/gesture" element={<Gesture />} />
+      <Route path="/animated-input" element={<Input />} />
     </Route>
   )
 );
