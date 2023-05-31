@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import Heading from '../components/Heading';
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-5rem)] bg-purple-500 ">
+    <div className="flex justify-center items-center h-[calc(100vh-5rem)] bg-purple-500">
       <div className="overflow-hidden">
         <motion.div
           animate={{
@@ -12,9 +13,7 @@ const Home = () => {
           }}
           transition={{ ease: 'easeInOut', duration: 1.2 }}
         >
-          <h1 className="text-[5rem] font-bold text-white tracking-wide">
-            Framer Motion Part. 1
-          </h1>
+          <Heading title="Framer Motion" />
         </motion.div>
       </div>
     </div>
